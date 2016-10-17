@@ -1,0 +1,46 @@
+########################################
+# README
+# Mariana Llamas-Cendon
+#DS Post Live Assignment 6
+# 16 Oct 2016
+#######################################
+
+
+The data set that was "cleaned" for this project was dowloaded from the Official Webiste of New York City (http://www1.nyc.gov/home/search/index.page?search-terms=Rolling+sales+update). The data set assigned to this project was specifically the one named Rolling_Queens.xls, which then was converted into .csv.
+
+Using this data set, we focused on the following variables:
+1. sale.price, which after deleting the values that were not digits and coercing it from a Factor to a numeric type became sale.price.n
+2. gross.square.feet, which was also corced from a Factor to a numeric type.
+3. land.square.feet, also coerced from a Factor to a numeric type.
+4. year.built, which was coerced from an integer to a numeric type.
+5. building.class.category, which became bk.homes
+
+The coercions taken place from Factor to numeric were done in order to manipulate data more efficiently.
+
+No NA values were removed from either variable. 
+
+For variables such as sale.price.n, only actual sales different from zero were considered. 
+
+Files
+graphical representation of the data is represented in plots, whether regular plot, log base 10 plot or log plots.
+
+The goals of this assignment are:
+a) to understand the basic principles of tidying a data set using R programming and RStudio
+b) To understand the principles of reproducible research by: 
+
+  a) Creating an RStudio project that will be "pushed" to a git repository containing:
+1. A Data directory:
+          -rollingsales_queens.csv
+          -rollingsales_queens.xls
+  -gatherRS.R (Containing code to clean the data set rollingsales_queens.csv)
+  -gatherbksale.R (Containing the clean created data frame bk.sale)
+  -gatherbkhomes.R (Containing steps and clean created data frame bk.homes)
+  -Makefile.R
+
+2. An Analysis directory:
+  -analysis1.R (Containing the codes for plotting both data frames bk.sales and bk.homes)
+
+3. A Paper directory:
+  -Conclusion.txt (Containing explanation of patterns in the data)    
+  -Conclusion.html (Containing a graphical of the plots described on Conclusion.txt)
+          
