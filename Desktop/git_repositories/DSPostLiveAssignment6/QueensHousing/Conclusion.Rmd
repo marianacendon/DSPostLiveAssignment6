@@ -1,0 +1,71 @@
+---
+title: "Conclusion"
+author: "Mariana Llamas-Cendon"
+date: "10/17/2016"
+output: html_document
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+
+#################################################################
+# Queens Housing Analysis 
+# Mariana Llamas-Cendon
+# DS Post Live Assignment 6
+# Data dowloaded from Official NYC website: http://www1.nyc.gov/home/search/index.page?search-terms=Rolling+sales+update
+################################################################
+
+# INTRODUCTION
+
+# The purpose of this project is to understand the concept of tyding data in R programming language, in order to prepare it for analysis of the data set rollingsales_queens.csv to analyze the Queens housing situation in the Queens neighborhood of NYC, based on gross square footage, sales price, and type of household (1, 2 or 3 family homes).
+
+
+## This data "cleaning" will include important aspects such as:
+### 1. Eliminating values other than digits that are part ofsome of the variables (i.e., \t, \t-)
+### 2. To coerce variables that are factors into numeric values
+### 3. Identify missing values (NAs) and outliers
+### 4. create new data frames including the values of variables of interest to determine the correlation between the sale price, according to the gross square footage and the type of household. 
+### 5. create graphical displays using plots to determine how to treat outliers.
+
+# LOADING FILES IN TO R
+
+
+setwd("/Users/marianallamas-cendon/Desktop/git_repositories/DSPostLiveAssignment6/QueensHousing")
+
+source("Data/gatherRS.R") # First exploration of data and tyding data for analysis
+
+# CLEANING THE DATA
+## The following files contain the steps for tyding the data before analyzing it.
+
+source("Data/gatherbksale2.R") # This file contains the steps to clean the created data frame bk.sale
+source("Data/gatherbkhomes.R") # This file contains the created data frame bk.homes and how outliers were eliminated
+
+
+# ANALYSIS
+## The following file contains exploratory data for data for data frames bk.sale and bk.homes
+
+### The progression from the messy data to the clean one can be seen gradually from the positive extreme skewed histogram of the bk data frame of the variable sale.price.n.
+
+### PLOT 1. When we look at the graphical displays below for bk.sale$gross.sqft, bk.sale$sale.price.n we can see that there is a cluster of values in the lower left side of the graph so it is difficult to get a conclusion from this, except the presence of outliers.
+
+### PLOT 2. Doing a log base 10 plot for bk.sale$gross.sqft, bk.sale$sale.price.n did result in a more "linear" trend that is visible, although it also created the problem of two outliers located on the left side (approximately at 0.4, and 0.5 on the x-axis and about 5.7 and 5.8 on the y-axis), and plenty more present from aproximately 2.5-6.2 on the x-axis to 5.5 on the y-axis.
+  
+
+### PLOT 3. and PLOT 4. The last two plots show how data looks after outliers were eliminated by considering only 1, 2, 3 family homes below 100,000, which had a gross square footage of less than 4.0 and a sale price of less than 6.5. It is obvious that the last plot displays a cleaner plot in which there is an positive upward linear trend. 
+
+
+source("Analysis/analysis.R")
+
+
+
+# CONCLUSION
+## This project definitely pointed out the importance of determining beforehand the purpose of the study since that facilitates the correct exploration of the data, allowing to maximize time and resources in cleaning only those variables that are of interest, such as in this particular case: the sale price, gross square footage, and building class category. 
+
+## Also I learned to subset new data frames from the original one, in order to make it easy to manipulate the data we want to work with.
+
+## The importance of plotting every single step is of pivotal to determine if outliers are present, and how we should treat them.
+
+# Finally, this project also taught me how to work with git and github in order to create a repository, and push the project to it. It was definitely challenging, but an amazing learning curve to experience how they work together. 
+```
+
+

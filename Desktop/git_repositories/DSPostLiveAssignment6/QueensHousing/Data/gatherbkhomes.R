@@ -8,7 +8,7 @@
 
 # Load packages
 
-library (gdata)
+
 
 library (plyr)
 
@@ -32,3 +32,8 @@ bk.homes$outliers <- (log10(bk.homes$sale.price.n) <=5) + 0
 
 bk.homes <- bk.homes[which(bk.homes$outliers==0),]
 
+bk.homes <- bk.homes[bk.homes$gross.sqft > 100,]
+
+bk.homes <- bk.homes[log10(bk.homes$gross.sqft) < 3.9,]
+
+bk.homes <- bk.homes[log10(bk.homes$sale.price.n) < 6.5,]

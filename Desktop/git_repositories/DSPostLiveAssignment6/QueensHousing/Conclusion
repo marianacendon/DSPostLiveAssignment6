@@ -1,0 +1,17 @@
+###############################################
+# Conclusion
+# Mariana Llamas-Cendon
+# DS Post Live Assignment 6
+# 16 Oct 2016
+##############################################
+
+# Plots are located on Conclusion.Rmd inside the "Paper"" Directory.
+
+Conclusions:
+
+The progression from the messy data to the clean one can be seen gradually from the positive extreme skewed histogram of the bk data frame of the variable sale.price.n.
+When we look at the graphical displays on Conclusion.Rmd) for bk.sale$gross.sqft, bk.sale$sale.price.n we can see a tendency to a straight line, but most of the values are clustered in the lower left side of the graph so it is difficult to get a conclusion from this, except the presence of outliers.
+  Doing a log base 10 plot for bk.sale$gross.sqft, bk.sale$sale.price.n did result in a more "linear" trend that is visible, although it also created the problem of excessive and  all over the place outliers.
+  By selecting only those 1, 2, 3 Family homes from the variable building.class.category, we can definitely see that the "linear" trend is more defined and evident, although there are still plenty of outliers present.
+  By eliminating outliers, considering only those homes below 100,000, and doing just a log plot on bk.homes$gross.sqft, and bk.homes$sale.price.n we can see a cleaner plot in which there is an positive upward linear trend. 
+  The progression between the presence outliers to a clean plot is evident after looking at the last plot. 

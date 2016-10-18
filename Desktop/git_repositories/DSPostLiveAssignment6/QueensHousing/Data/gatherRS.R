@@ -6,19 +6,17 @@
 # Data downloaded from: http://www1.nyc.gov/home/search/index.page?search-terms=Rolling+sales+update
 #########################
 
-#packages required: (gdata) and (plyr)
+
+#packages required: (plyr)
+
 
 library(gdata)
 library(plyr)
 
-# Read raw data in .xls
-## perl interpeter may be required to do this in Windows
+# Data originally in .xls
+# File was saved as .csv, therefore use read.csv
 
-bk <- read.xls("rollingsales_queens.xls", pattern = "BOROUGH")
-
-# File was also saved as csv, therefore use read.csv
-
-bk <- read.csv("rollingsales_queens.csv", skip = 4, header = TRUE)
+bk <- read.csv("Data/rollingsales_queens.csv", skip = 4, header = TRUE)
 
 # Explore the data set
 
@@ -56,6 +54,6 @@ bk$year.built <- as.numeric(as.character(bk$year.built))
 
 attach(bk)
 hist(sale.price.n)
-dettach(bk)
+detach(bk)
 
 

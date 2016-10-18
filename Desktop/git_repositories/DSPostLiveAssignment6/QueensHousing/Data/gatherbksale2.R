@@ -13,6 +13,7 @@
 library(gdata)
 library(plyr)
 
+
 ## Eliminate values that are equal to 0 from bk.sale data frame
 
 bk.sale <- bk[bk$sale.price.n!=0,]
