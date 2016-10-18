@@ -12,7 +12,7 @@ setwd("DSPostLiveAssingment6/QueensHousing")
 source("Data/gatherRS.R")
 source("Data/gatherbksale2.R")
 source("Data/gatherbkhomes.R")
-source("Analysis/analisys.R")
+source("Analysis/analysis.R")
 
 
 
