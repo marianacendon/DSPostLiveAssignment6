@@ -22,25 +22,26 @@ No NA values were removed from either variable.
 For variables such as sale.price.n, only actual sales different from zero were considered. 
 
 Files
-graphical representation of the data is represented in plots, whether regular plot, log base 10 plot or log plots.
+Graphical representation of the data is represented in plots, whether regular plot, log base 10 plot or log plots.
 
 The goals of this assignment are:
 a) to understand the basic principles of tidying a data set using R programming and RStudio
 b) To understand the principles of reproducible research by: 
 
   a) Creating an RStudio project that will be "pushed" to a git repository containing:
-1. A Data directory:
+1. README file
+2. Conclusion.Rmd
+
+3. A Data directory:
           -rollingsales_queens.csv
-          -rollingsales_queens.xls
   -gatherRS.R (Containing code to clean the data set rollingsales_queens.csv)
-  -gatherbksale.R (Containing the clean created data frame bk.sale)
+  -gatherbksale2.R (Containing the clean created data frame bk.sale)
   -gatherbkhomes.R (Containing steps and clean created data frame bk.homes)
   -Makefile.R
 
-2. An Analysis directory:
-  -analysis1.R (Containing the codes for plotting both data frames bk.sales and bk.homes)
+4. An Analysis directory:
+  -analysis.R (Containing the codes for plotting both data frames bk.sales and bk.homes)
 
-3. A Paper directory:
-  -Conclusion.txt (Containing explanation of patterns in the data)    
-  -Conclusion.html (Containing a graphical of the plots described on Conclusion.txt)
+5. A Paper directory:
+  -Conclusion.html (Displaying the results and plots from Conclusion.Rmd)
           
