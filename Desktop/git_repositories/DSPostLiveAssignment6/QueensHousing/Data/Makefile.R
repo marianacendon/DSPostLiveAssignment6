@@ -9,10 +9,10 @@ setwd("DSPostLiveAssingment6/QueensHousing")
 
 # Gather and clean up raw data files and analysis
 
-source("/Data/gatherRS.R")
-source("/Data/gatherbksale.R")
-source("/Data/gatherbkhomes.R")
-source("/Analysis/analysis1.R")
+source("Data/gatherRS.R")
+source("Data/gatherbksale2.R")
+source("Data/gatherbkhomes.R")
+source("Analysis/analisys.R")
 
 
 
